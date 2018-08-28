@@ -3,15 +3,15 @@ package com.pearson.empapp.entity;
 public class Employee {
 
 	private String id;
-	private String firstName;
-	private String lastName;
+	private String name;
+	private String dob;
 	private Department department;
 	
-	public Employee(String id, String firstName, String lastName) {
+	public Employee(String id, String name, String dob) {
 		super();
 		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.name = name;
+		this.dob = dob;
 	}
 
 	public Department getDepartment() {
@@ -26,14 +26,14 @@ public class Employee {
 		return id;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getName() {
+		return name;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getDob() {
+		return dob;
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

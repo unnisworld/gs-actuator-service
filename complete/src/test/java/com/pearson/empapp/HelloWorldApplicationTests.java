@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package hello;
+package com.pearson.empapp;
 
 import java.util.Map;
 
@@ -53,19 +53,13 @@ public class HelloWorldApplicationTests {
 	@Test
 	public void shouldReturn200WhenSendingRequestToController() throws Exception {
 		@SuppressWarnings("rawtypes")
-		ResponseEntity<Map> entity = this.testRestTemplate.getForEntity(
-				"http://localhost:" + this.port + "/hello-world", Map.class);
+		ResponseEntity<String> entity = this.testRestTemplate.getForEntity(
+				"http://localhost:" + this.port + "/employees", String.class);
+		
+		// TODO : Add more assertions
 
 		then(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
 	}
 
-	@Test
-	public void shouldReturn200WhenSendingRequestToManagementEndpoint() throws Exception {
-		@SuppressWarnings("rawtypes")
-		ResponseEntity<Map> entity = this.testRestTemplate.getForEntity(
-				"http://localhost:" + this.mgt + "/actuator/info", Map.class);
-
-		then(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
-	}
 
 }
