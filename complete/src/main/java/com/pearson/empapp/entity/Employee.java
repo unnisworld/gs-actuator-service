@@ -7,6 +7,10 @@ public class Employee {
 	private String dob;
 	private String departmenId;
 	
+	public Employee() {
+		
+	}
+	
 	public Employee(String name, String dob) {
 		this.name = name;
 		this.dob = dob;
@@ -61,6 +65,11 @@ public class Employee {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", dob=" + dob + ", departmenId=" + departmenId + "]";
 	}
 	
 	

@@ -1,0 +1,1 @@
+curl --header "Content-Type: application/json" --request POST --data '{"id":"http://example.org/Shiva","name":"Shiva","dob":"1/1/1960","departmentId":"httShiva/example.org/Finance"}' http://localhost:9000/employees
