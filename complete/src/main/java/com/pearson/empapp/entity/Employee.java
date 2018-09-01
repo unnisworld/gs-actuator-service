@@ -5,21 +5,25 @@ public class Employee {
 	private String id;
 	private String name;
 	private String dob;
-	private Department department;
+	private String departmenId;
 	
-	public Employee(String id, String name, String dob) {
-		super();
-		this.id = id;
+	public Employee(String name, String dob) {
 		this.name = name;
 		this.dob = dob;
 	}
-
-	public Department getDepartment() {
-		return department;
+	
+	public Employee(String id, String name, String dob) {
+		this(name, dob);
+		this.id = id;
 	}
 
-	public void setDepartment(Department department) {
-		this.department = department;
+	public Employee(String id, String name, String dob, String deptId) {
+		this(id, name, dob);
+		this.departmenId = deptId;
+	}
+	
+	public String getDepartmentId() {
+		return departmenId;
 	}
 
 	public String getId() {

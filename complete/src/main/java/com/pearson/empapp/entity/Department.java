@@ -9,10 +9,13 @@ public class Department {
 	private String name;
 	private List<Employee> employees;
 	
-	public Department(String id, String name) {
-		super();
-		this.id = id;
+	public Department(String name) {
 		this.name = name;
+	}
+	
+	public Department(String id, String name) {
+		this(name);
+		this.id = id;
 	}
 	
 	public String getId() {
